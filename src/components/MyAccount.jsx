@@ -37,7 +37,7 @@ class MyAccount extends Component {
             password_confirm
           );
           alert("You succesfully created an account!");
-          register_form.reset();
+          document.getElementById("register_form").reset();
         } else {
           alert("Password mismatch...");
         }
@@ -55,10 +55,10 @@ class MyAccount extends Component {
 
       if (login_password.length < 8) {
         alert("Invalid Password");
-        login_form.reset();
+        document.getElementById("login_form").reset();
       } else {
         this.props.loginUser(login_username, login_password);
-        login_form.reset();
+        document.getElementById("login_form").reset();
       }
     };
 
